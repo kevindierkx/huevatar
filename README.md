@@ -19,7 +19,7 @@ You must then modify your composer.json file and run composer update to include 
 
 Or you can run the composer require command from your terminal.
 
-```
+```php
 composer require kevindierkx/huevatar:0.1.*
 ```
 
@@ -27,7 +27,7 @@ Once the package is installed you need to open ```app/config/app.php``` and regi
 
 ```php
 'providers' => [
-    'Kevindierkx\ViewLocalization\ViewLocalizationServiceProvider'
+    'Kevindierkx\Huevatar\HuevatarServiceProvider'
 ]
 ```
 
@@ -37,6 +37,14 @@ Optionaly you can add the following line to your aliases.
 'aliases' => [
     'Huevatar'          => 'Kevindierkx\Huevatar\Huevatar',
 ]
+```
+
+### Configuration
+
+Run the following command to publish the package configuration.
+
+```php
+php artisan config:publish kevindierkx/huevatar
 ```
 
 ### Usage
